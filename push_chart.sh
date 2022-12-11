@@ -21,7 +21,7 @@ then
     git checkout chart-releases
     git pull
     helm repo index ${CHART_PACKAGE_PATH} --merge index.yaml --url oci://${CHART_REGISTRY}/${OWNER_REPO}
-    mv -f "index.yaml" "index.yaml"
+    mv -f "${CHART_PACKAGE_PATH}/index.yaml" "index.yaml"
     git add index.yaml
     git commit -m "Update index..."
     git push
