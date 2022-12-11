@@ -4,10 +4,10 @@ FILES="$1/*.tgz"
 export isChartChange=0
 
 echo "GITHUG_TOKEN" | helm registry login -u ${GITHUG_TOKEN} --password-stdin ${CHART_REGISTRY}
-for file in $FILES
+for f in $FILES
 do
-    echo "$file Processing"
-    helm push $file oci://${CHART_REGISTRY}/${OWNER_REPO}
+    echo "$f Processing"
+    helm push $f oci://${CHART_REGISTRY}/${OWNER_REPO}
     export isChartChange=1
 done
 
