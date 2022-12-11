@@ -3,7 +3,7 @@ echo "Begin"
 FILES="$1/*.tgz"
 export isChartChange=0
 
-echo "GITHUG_TOKEN" | helm registry login -u ${GITHUG_TOKEN} --password-stdin ${CHART_REGISTRY}
+echo "GITHUG_TOKEN" | helm registry login -u ${namnextx} --password-stdin ${CHART_REGISTRY}
 for f in $FILES
 do
     echo "$f Processing"
