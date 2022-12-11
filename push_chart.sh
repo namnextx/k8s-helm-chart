@@ -3,7 +3,7 @@ echo "Begin"
 FILES="$1/*.tgz"
 export isChartChange=0
 
-echo "081195oT" | helm registry login -u ${namnextx} --password-stdin ${CHART_REGISTRY}
+echo "$GITHUB_TOKEN" | helm registry login -u ${namnextx} --password-stdin ${CHART_REGISTRY}
 for f in $FILES
 do
     echo "$f Processing"
