@@ -1,0 +1,3 @@
+port: 3000
+identity_key: testkey
+image: namphuong/examplenode-dev:6e959e6
