@@ -32,4 +32,4 @@ jobs:
           CHART_REGISTRY: ghcr.io
         run: |
           chmod +x ./push_chart.sh
-          sh ./upload.sh ${CHART_PACKAGE_PATH}
+          sh ./push_chart.sh ${CHART_PACKAGE_PATH}
