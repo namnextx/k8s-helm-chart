@@ -1,0 +1,4 @@
+owner: namnextx
+git-repo: k8s-helm-deployment
+package-path: .cr-release-packages
+charts-repo: https://raw.githubusercontent.com/namnextx/k8s-helm-deployment/gh-pages/
