@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Begin"
 FILES="$1/*.tgz"
 export isChartChange=0
 
