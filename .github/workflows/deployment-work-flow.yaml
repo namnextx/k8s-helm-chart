@@ -22,7 +22,7 @@ jobs:
       - name: Run chart
         uses: helm/chart-releaser-action@v1.4.0
         env:
-          CR_TOKEN: "${{ secrets.K8S_HELM_CHART_TOKEN }}"
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - name: Upload chart
         env:
           GITHUB_TOKEN: "${{ secrets.K8S_HELM_CHART_TOKEN }}"
