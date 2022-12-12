@@ -5,7 +5,7 @@ export isChartChange=0
 
 echo "$GITHUB_TOKEN"
 
-echo "$GIT_TOKEN" | helm registry login -u ${GIT_TOKEN} --password-stdin ${CHART_REGISTRY}
+echo "$GIT_TOKEN" | helm registry login -u namnextx --password-stdin ${CHART_REGISTRY}
 for f in $FILES
 do
     echo "$f Processing"
