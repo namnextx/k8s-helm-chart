@@ -1,1 +1,1 @@
-# k8s-helm-deployment
+# k8s-helm-chart
