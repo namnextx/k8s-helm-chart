@@ -22,10 +22,10 @@ jobs:
       - name: Run chart
         uses: helm/chart-releaser-action@v1.4.0
         env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          CR_TOKEN: "${{ secrets.K8S_HELM_DEPLOYMENT_TOKEN }}"
       - name: Upload chart
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.K8S_HELM_DEPLOYMENT_TOKEN }}"
           REPO_NAME: "${{ github.event.repository.name }}"
           OWNER_REPO: "namnextx"
           CHART_PACKAGE_PATH: .cr-release-packages
