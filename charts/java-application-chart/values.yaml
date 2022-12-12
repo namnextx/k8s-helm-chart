@@ -1,3 +1,6 @@
 port: 3000
 identity_key: testkey
-image: namphuong/examplenode-dev:6e959e6
+image:
+  repository: ghcr.io/namnextx/k8s-java-application
+  pullPolicy: IfNotPresent
+  tag: dev-1ebd7f7
