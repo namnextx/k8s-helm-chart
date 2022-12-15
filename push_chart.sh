@@ -8,7 +8,7 @@ echo "$GITHUB_TOKEN" | helm registry login -u namnextx --password-stdin ${CHART_
 for f in $FILES
 do
     echo "$f Processing"
-    helm package charts/*
+    helmm init
     helm push $f oci://${CHART_REGISTRY}/${OWNER_REPO}
     export isChartChange=1
 done
