@@ -19,10 +19,11 @@ jobs:
       - name: Initial Helm
         uses: azure/setup-helm@v1
 
-      - name: Run chart
+      - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.4.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
       - name: Upload chart version
         env:
           GIT_TOKEN: "${{ secrets.K8S_HELM_CHART_PASSWORD }}"
