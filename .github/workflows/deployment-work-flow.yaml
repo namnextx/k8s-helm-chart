@@ -23,7 +23,7 @@ jobs:
         uses: helm/chart-releaser-action@v1.4.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Upload chart
+      - name: Upload chart version
         env:
           GIT_TOKEN: "${{ secrets.K8S_HELM_CHART_PASSWORD }}"
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
