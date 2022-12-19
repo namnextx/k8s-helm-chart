@@ -6,8 +6,7 @@ helm package charts/java-application-chart
 FILES="*.tgz"
 export isChartChange=0
 
-
-echo "$GITHUB_TOKEN" | helm registry login -u namnextx --password-stdin ghcr.io
+echo "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" | helm registry login -u namnextx --password-stdin ghcr.io
 
 for f in $FILES
 do
@@ -15,6 +14,8 @@ do
     helm push $f oci://ghcr.io/namnextx
     export isChartChange=1
 done
+
+echp isChartChange
 
 #echo $isChartChange
 #
