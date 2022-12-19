@@ -1,14 +1,18 @@
 #!/bin/bash
 echo "Begin"
-FILES="$1/*.tgz"
+
+helm package charts/java-application-chart
+
+FILES="*.tgz"
 export isChartChange=0
 
-echo "$GITHUB_TOKEN" | helm registry login -u namnextx --password-stdin ${CHART_REGISTRY}
+
+echo "$GITHUB_TOKEN" | helm registry login -u namnextx --password-stdin ghcr.io
 
 for f in $FILES
 do
     echo "$f Processing"
-    echo "helm push" | helm push $f oci://${CHART_REGISTRY}/${OWNER_REPO}
+    helm push $f oci://ghcr.io/namnextx
     export isChartChange=1
 done
 
