@@ -4,7 +4,7 @@ echo "Begin"
 FILES="$1/*.tgz"
 export isChartChange=0
 
-echo "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" | helm registry login -u namnextx --password-stdin ghcr.io
+echo "$GITHUB_TOKEN" | helm registry login -u namnextx --password-stdin ghcr.io
 
 for f in $FILES
 do
