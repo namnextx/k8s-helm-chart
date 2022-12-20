@@ -28,7 +28,7 @@ jobs:
 
       - name: Upload chart version
         env:
-          GIT_TOKEN: "${{ secrets.K8S_HELM_CHART_PASSWORD }}"
+          GIT_TOKEN: "${{ secrets.K8S_HELM_CHART_TOKEN }}"
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           REPO_NAME: "${{ github.event.repository.name }}"
           OWNER_REPO: "namnextx"
