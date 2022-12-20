@@ -4,12 +4,12 @@ echo "Begin"
 FILES="$1/*.tgz"
 export isChartChange=0
 
-echo "$GITHUB_TOKEN" | helm registry login -u namnextx --password-stdin ghcr.io
+echo "$GITHUB_TOKEN" | helm registry login -u namnextx --password-stdin ${CHART_REGISTRY}
 
 for f in $FILES
 do
     echo "$f Processing"
-    helm push $f oci://ghcr.io/namnextx
+    helm push $f oci://${CHART_REGISTRY}/${OWNER_REPO}
     export isChartChange=1
 done
 
