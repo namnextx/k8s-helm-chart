@@ -1,6 +1,6 @@
 image:
   repository: ghcr.io/namnextx/k8s-java-application
-  tag: dev-1ebd7f7
+  tag: dev-64ef8a1
 replicaNumber: 1
 
 deployment:
@@ -9,3 +9,4 @@ deployment:
 service:
   type: ClusterIP
   port: 80
+nameOverride: "subscriptions-service"
