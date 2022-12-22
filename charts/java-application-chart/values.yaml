@@ -9,4 +9,4 @@ deployment:
 service:
   type: ClusterIP
   port: 80
-nameOverride: "subscriptions-service"
+nameOverride: "java-application"
