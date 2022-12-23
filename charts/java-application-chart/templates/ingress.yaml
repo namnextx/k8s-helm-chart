@@ -4,17 +4,17 @@ metadata:
   name: {{ include "chart.name" .}}
   namespace: {{ template "common.namespaces" }}
   annotations:
-    konghq.com/strip-path: 'true'
+    konghq.com/strip-path: 'false'
+    ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   ingressClassName: kong
   rules:
-  - host: 'hello-google-cloud'
-    http:
+  - http:
       paths:
       - path: /
-        pathType: ImplementationSpecific
+        pathType: Prefix
         backend:
           service:
             name: {{ include "chart.name" .}}
             port:
-              number: {{ .Values.deployment.containerPort }}
+              number: 8080
