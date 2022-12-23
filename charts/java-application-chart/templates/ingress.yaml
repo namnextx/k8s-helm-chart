@@ -8,7 +8,8 @@ metadata:
 spec:
   ingressClassName: kong
   rules:
-  - http: 'kong.example'
+  - host: 'kong.example'
+    http:
       paths:
       - path: /
         pathType: ImplementationSpecific
@@ -17,3 +18,17 @@ spec:
             name: {{ include "chart.name" .}}
             port:
               number: {{ .Values.deployment.containerPort }}
+
+
+spec:
+  rules:
+  - host: 'kong.example'
+    http:
+      paths:
+      - path: /echo
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: echo
+            port:
+              number: 80
