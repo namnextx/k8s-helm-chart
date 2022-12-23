@@ -3,9 +3,9 @@ entries:
   java-application-chart:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-12-22T14:37:40.242911627Z"
+    created: "2022-12-23T11:12:29.967420842Z"
     description: A Helm chart for Kubernetes
-    digest: 34af29dd1e220b9921d5b003f44292ed8f5bdea7c694b5652fee12f494a13946
+    digest: 6928cb0aa0f0b8e670a453e3a105df6bdac66b26e51569fb62d3da996aa0f00e
     name: java-application-chart
     type: application
     urls:
@@ -91,4 +91,4 @@ entries:
     urls:
     - oci://ghcr.io/namnextx/java-application-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2022-12-23T10:48:22.058585547Z"
+generated: "2022-12-23T11:12:29.967029341Z"
