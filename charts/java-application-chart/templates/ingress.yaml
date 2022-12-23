@@ -4,13 +4,14 @@ metadata:
   name: {{ include "chart.name" .}}
   namespace: {{ template "common.namespaces" }}
   annotations:
-    ingress.kubernetes.io/ssl-redirect: "false"
+    konghq.com/strip-path: 'true'
 spec:
+  ingressClassName: kong
   rules:
-  - http:
+  - http: 'kong.example'
       paths:
       - path: /
-        pathType: Prefix
+        pathType: ImplementationSpecific
         backend:
           service:
             name: {{ include "chart.name" .}}
