@@ -14,3 +14,8 @@
      helm lint ./charts/java-application-chart
     ```
 
+## 2. Kong Ingress on Google Kubernetes Engine
+### 2.0. Install Kong Ingress Controller
+Link: https://docs.konghq.com/kubernetes-ingress-controller/latest/deployment/gke/
+### 2.1. Config an ingress
+Link: https://docs.konghq.com/kubernetes-ingress-controller/2.8.x/guides/getting-started/
