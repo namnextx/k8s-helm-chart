@@ -11,7 +11,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /
+      - path: /k8s-java-application
         pathType: Prefix
         backend:
           service:
